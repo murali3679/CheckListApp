@@ -1,0 +1,16 @@
+<mvc:View controllerName="testchk.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <!-- <Page id="page" title="{i18n>title}">
+    </Page> -->
+
+    <Toolbar >
+    <ToolbarSpacer >
+    </ToolbarSpacer>
+    <Title text="Test chk"></Title>
+
+    <ToolbarSpacer ></ToolbarSpacer>
+    <Button id="ref" icon="sap-icon://synchronize" press="onOK"></Button>
+    <Button id="icon" icon="sap-icon://action-settings" press="onClick"></Button>
+    </Toolbar>
+</mvc:View>

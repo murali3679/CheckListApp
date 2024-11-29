@@ -1,0 +1,64 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Popover
+        id="myPopover"
+        title="Check Objects"
+        placement="Left"
+        contentHeight="500px"
+        contentWidth="500px"
+    >
+        <List id="popList" 
+		items="{
+			path: '/results'
+		}"
+		 >
+        <!-- <List id="popList"> -->
+            <CustomListItem  >
+                <CheckBox
+                    text="{ID}"
+                    select="onCheck"
+					selected="{= ${STATUS} === 'true' ? true : false }"
+                />
+            </CustomListItem>
+            <!-- <CustomListItem>
+                <CheckBox
+                    text="PROD"
+                    id="prod"
+					select="onCheck"
+					selected="{STATUS}"
+                />
+            </CustomListItem>
+            <CustomListItem>
+                <CheckBox
+                    text="ID"
+                    id="id"
+					select="onCheck"
+					selected="{STATUS}"
+                />
+            </CustomListItem>
+            <CustomListItem>
+                <CheckBox
+                    text="MATERIAL"
+                    id="mat"
+					select="onCheck"
+					selected="{STATUS}"
+                />
+            </CustomListItem> -->
+        </List>
+        <!-- <footer>
+        
+       
+        <
+        </footer> -->
+        <footer>
+            <OverflowToolbar>
+                <content>
+                    <ToolbarSpacer />
+                    <!-- <Button press="onOK" text="OK" type="Emphasized"></Button> -->
+                </content>
+            </OverflowToolbar>
+        </footer>
+    </Popover>
+</core:FragmentDefinition>

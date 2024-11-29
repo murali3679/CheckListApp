@@ -1,0 +1,6 @@
+
+GET http://localhost:4004/odata/v4/catalog/validation(Data='[{"Name":"LOC"},{"Name":"PROD"}]')
+
+
+
+# GET  https://port4004-workspaces-ws-d9mdg.us10.trial.applicationstudio.cloud.sap/v2/odata/v4/catalog/validation?Data='[{"Name":"LOC"},{"Name":"PROD"}]'
