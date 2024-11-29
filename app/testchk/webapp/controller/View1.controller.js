@@ -84,7 +84,7 @@ sap.ui.define([
                     else {
                         // var arr2 = arr;
                         // var arr1 = [];
-                        that.validCall(arr)
+                        that.validCall(arr)//some
                     }
                 },
                 error: function (er) {
