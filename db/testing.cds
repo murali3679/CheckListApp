@@ -10,9 +10,9 @@ entity obj_status {
 }
 
 entity Output {
+        ID          : String(20);
         TYPE        : String(1);
-        OBJECT      : String(50);
-    key ID          : String(20);
+    key OBJECT      : String(50) ;
         TIME        : String(200);
         NUMBER      : Integer64;
         MESSAGE     : String(220);
@@ -29,3 +29,12 @@ entity Output {
         MESSAGE_V9  : String(50);
         MESSAGE_V10 : String(50);
 };
+
+entity Variant{
+    key User:String(50);
+        LOC:String;
+        PROD:String;
+        ID:String;
+        MATERIAL:String;
+
+}

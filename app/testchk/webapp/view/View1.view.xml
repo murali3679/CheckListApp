@@ -1,16 +1,200 @@
-<mvc:View controllerName="testchk.controller.View1"
+<mvc:View
+    controllerName="testchk.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <!-- <OverflowToolbar style="Clear">
+            <Title text="Custom Toolbar with a header text" />
+            <ToolbarSpacer />
+            <Button
+                text="Toggle Modify View"
+                press="onPress"
+            />
+        </OverflowToolbar> -->
+
+    <f:DynamicPage id="dynamicPage">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <VariantManagement
+                        id="vm"
+                        select="onSelect"
+                        save="onSave"
+                        manage="onManage"
+                        selectedKey="Standard"
+                        defaultKey="Standard"
+                        showFooter="true"
+                        popoverTitle="my Favorites"
+                    >
+                        <items>
+                            <VariantItem
+                                key="Standard"
+                                title="Standard"
+                                author="Owner"
+                                favorite="true"
+                                visible="true"
+                                executeOnSelect="false"
+                                rename="false"
+                                changeable="false"
+                                remove="false"
+                                sharing="public"
+                            />
+                            <VariantItem
+                                key="User1"
+                                title="User1"
+                                author="A"
+                                favorite="true"
+                                visible="true"
+                                executeOnSelect="false"
+                                rename="true"
+                                changeable="true"
+                                remove="true"
+                                sharing="private"
+                            />
+                            <VariantItem
+                                key="User2"
+                                title="User2"
+                                author="A"
+                                favorite="true"
+                                visible="true"
+                                executeOnSelect="true"
+                                rename="true"
+                                changeable="true"
+                                remove="true"
+                                sharing="private"
+                            />
+                            <VariantItem
+                                key="User3"
+                                title="User3"
+                                author="A"
+                                favorite="false"
+                                visible="true"
+                                executeOnSelect="true"
+                                rename="false"
+                                changeable="true"
+                                remove="false"
+                                sharing="public"
+                            />
+                        </items>
+                    </VariantManagement>
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <VBox>
+                <Toolbar>
+                    <ToolbarSpacer />
+                    <Title text="Test chk" />
+
+                    <ToolbarSpacer />
+                    <Button
+                        id="ref"
+                        icon="sap-icon://synchronize"
+                        press="onOK"
+                    />
+                    <Button
+                        id="icon"
+                        icon="sap-icon://action-settings"
+                        press="onClick"
+                    />
+                    <!-- <Button id="del" text="delete" press="onDelete"></Button> -->
+                </Toolbar>
+                <ScrollContainer horizontal="false">
+                    <Table
+                        id="tab"
+                        visible="false"
+                        items="{path:'/'}"
+                        alternateRowColors="true"
+                        swipeDirection="BeginToEnd"
+                    >
+                        <columns>
+                            <Column>
+                                <Text text="TYPE" />
+                            </Column>
+                            <Column>
+                                <Text text="ID" />
+                            </Column>
+                            <Column>
+                                <Text text="OBJECT" />
+                            </Column>
+                            <Column>
+                                <Text text="TIME" />
+                            </Column>
+                            <Column>
+                                <Text text="NUMBER" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE" />
+                            </Column>
+                            <Column>
+                                <Text text="LOG_NO" />
+                            </Column>
+                            <Column>
+                                <Text text="LOG_MSG_NO" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V1" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V2" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V3" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V4" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V5" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V6" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V7" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V8" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V9" />
+                            </Column>
+                            <Column>
+                                <Text text="MESSAGE_V10" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{TYPE}" />
+                                    <Text text="{ID}" />
+                                    <Text text="{OBJECT}" />
+                                    <Text
+                                        text="{ path: 'TIME', formatter: '.formatDateTime' }"/>
+                                    <Text text="{NUMBER}" />
+                                    <Text text="{MESSAGE}" />
+                                    <Text text="{LOG_NO}" />
+                                    <Text text="{LOG_MSG_NO}" />
+                                    <Text text="{MESSAGE_V1}" />
+                                    <Text text="{MESSAGE_V2}" />
+                                    <Text text="{MESSAGE_V3}" />
+                                    <Text text="{MESSAGE_V4}" />
+                                    <Text text="{MESSAGE_V5}" />
+                                    <Text text="{MESSAGE_V6}" />
+                                    <Text text="{MESSAGE_V7}" />
+                                    <Text text="{MESSAGE_V8}" />
+                                    <Text text="{MESSAGE_V9}" />
+                                    <Text text="{MESSAGE_V10}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </ScrollContainer>
+            </VBox>
+        </f:content>
+    </f:DynamicPage>
+
     <!-- <Page id="page" title="{i18n>title}">
     </Page> -->
-
-    <Toolbar >
-    <ToolbarSpacer >
-    </ToolbarSpacer>
-    <Title text="Test chk"></Title>
-
-    <ToolbarSpacer ></ToolbarSpacer>
-    <Button id="ref" icon="sap-icon://synchronize" press="onOK"></Button>
-    <Button id="icon" icon="sap-icon://action-settings" press="onClick"></Button>
-    </Toolbar>
 </mvc:View>

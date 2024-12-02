@@ -18,7 +18,6 @@
             <CustomListItem  >
                 <CheckBox
                     text="{ID}"
-                    select="onCheck"
 					selected="{= ${STATUS} === 'true' ? true : false }"
                 />
             </CustomListItem>
